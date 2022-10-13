@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="DesignSurface">
+    <option name="filePathToZoomLevelMap">
+      <map>
+        <entry key="..\:/Users/Micro/AndroidStudioProjects/SorteiosKT/app/src/main/res/drawable-v24/border_custom_degrade_dinheiro.xml" value="0.3075" />
+        <entry key="..\:/Users/Micro/AndroidStudioProjects/SorteiosKT/app/src/main/res/drawable-v24/border_custom_degrade_musicas.xml" value="0.296" />
+        <entry key="..\:/Users/Micro/AndroidStudioProjects/SorteiosKT/app/src/main/res/drawable-v24/border_custom_degrade_palavras.xml" value="0.296" />
+        <entry key="..\:/Users/Micro/AndroidStudioProjects/SorteiosKT/app/src/main/res/drawable-v24/border_custom_degrade_videos.xml" value="0.296" />
+        <entry key="..\:/Users/Micro/AndroidStudioProjects/SorteiosKT/app/src/main/res/drawable-v24/shape_container_sorteios_cinza.xml" value="0.3075" />
+        <entry key="..\:/Users/Micro/AndroidStudioProjects/SorteiosKT/app/src/main/res/drawable-v24/shape_custom_degrade_verde.xml" value="0.3075" />
+        <entry key="..\:/Users/Micro/AndroidStudioProjects/SorteiosKT/app/src/main/res/drawable/background_custom_degrade_quadrado.xml" value="0.275" />
+        <entry key="..\:/Users/Micro/AndroidStudioProjects/SorteiosKT/app/src/main/res/drawable/border_custom_degrade.xml" value="0.275" />
+        <entry key="..\:/Users/Micro/AndroidStudioProjects/SorteiosKT/app/src/main/res/drawable/fundo_gradiente_branco.xml" value="0.275" />
+        <entry key="..\:/Users/Micro/AndroidStudioProjects/SorteiosKT/app/src/main/res/drawable/ic_arrow_branco_24.xml" value="0.3075" />
+        <entry key="..\:/Users/Micro/AndroidStudioProjects/SorteiosKT/app/src/main/res/drawable/ic_cadeado_login_24.xml" value="0.275" />
+        <entry key="..\:/Users/Micro/AndroidStudioProjects/SorteiosKT/app/src/main/res/drawable/ic_cnpj_cpf_24.xml" value="0.275" />
+        <entry key="..\:/Users/Micro/AndroidStudioProjects/SorteiosKT/app/src/main/res/drawable/ic_person_24.xml" value="0.275" />
+        <entry key="..\:/Users/Micro/AndroidStudioProjects/SorteiosKT/app/src/main/res/drawable/shape_app_sorteios.xml" value="0.275" />
+        <entry key="..\:/Users/Micro/AndroidStudioProjects/SorteiosKT/app/src/main/res/drawable/shape_container_sorteios.xml" value="0.25" />
+        <entry key="..\:/Users/Micro/AndroidStudioProjects/SorteiosKT/app/src/main/res/drawable/shape_custom_degrade_quadrado.xml" value="0.3075" />
+        <entry key="..\:/Users/Micro/AndroidStudioProjects/SorteiosKT/app/src/main/res/font/.xml" value="0.37916666666666665" />
+        <entry key="..\:/Users/Micro/AndroidStudioProjects/SorteiosKT/app/src/main/res/layout/activity_add_participantes.xml" value="0.3489583333333333" />
+        <entry key="..\:/Users/Micro/AndroidStudioProjects/SorteiosKT/app/src/main/res/layout/activity_cadastro.xml" value="0.2921875" />
+        <entry key="..\:/Users/Micro/AndroidStudioProjects/SorteiosKT/app/src/main/res/layout/activity_detalhes_sorteio.xml" value="0.2921875" />
+        <entry key="..\:/Users/Micro/AndroidStudioProjects/SorteiosKT/app/src/main/res/layout/activity_dinheiro.xml" value="0.33" />
+        <entry key="..\:/Users/Micro/AndroidStudioProjects/SorteiosKT/app/src/main/res/layout/activity_login.xml" value="0.33" />
+        <entry key="..\:/Users/Micro/AndroidStudioProjects/SorteiosKT/app/src/main/res/layout/activity_main.xml" value="0.3489583333333333" />
+        <entry key="..\:/Users/Micro/AndroidStudioProjects/SorteiosKT/app/src/main/res/layout/activity_musicas.xml" value="0.33489583333333334" />
+        <entry key="..\:/Users/Micro/AndroidStudioProjects/SorteiosKT/app/src/main/res/layout/activity_sorteios_salvos.xml" value="0.33489583333333334" />
+        <entry key="..\:/Users/Micro/AndroidStudioProjects/SorteiosKT/app/src/main/res/layout/adapter_sorteios_salvos.xml" value="0.67" />
+        <entry key="..\:/Users/Micro/AndroidStudioProjects/SorteiosKT/app/src/main/res/layout/fragment_dinheiro.xml" value="0.5" />
+        <entry key="..\:/Users/Micro/AndroidStudioProjects/SorteiosKT/app/src/main/res/layout/fragment_home.xml" value="0.3489583333333333" />
+        <entry key="..\:/Users/Micro/AndroidStudioProjects/SorteiosKT/app/src/main/res/layout/fragment_musicas.xml" value="0.33489583333333334" />
+        <entry key="..\:/Users/Micro/AndroidStudioProjects/SorteiosKT/app/src/main/res/layout/fragment_palavras.xml" value="0.33489583333333334" />
+        <entry key="..\:/Users/Micro/AndroidStudioProjects/SorteiosKT/app/src/main/res/layout/fragment_videos.xml" value="0.33489583333333334" />
+        <entry key="..\:/Users/Micro/AndroidStudioProjects/SorteiosKT/app/src/main/res/menu/menu_main.xml" value="0.3489583333333333" />
+      </map>
+    </option>
+  </component>
+  <component name="ProjectRootManager" version="2" languageLevel="JDK_11" default="true" project-jdk-name="Android Studio default JDK" project-jdk-type="JavaSDK">
+    <output url="file://$PROJECT_DIR$/build/classes" />
+  </component>
+  <component name="ProjectType">
+    <option name="id" value="Android" />
+  </component>
+</project>

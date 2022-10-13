@@ -1,0 +1,47 @@
+{
+  "project_info": {
+    "project_number": "678851369335",
+    "project_id": "sorteioskt",
+    "storage_bucket": "sorteioskt.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:678851369335:android:8e6c174fc9f1b6fa85e972",
+        "android_client_info": {
+          "package_name": "com.java.sorteioskt"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "678851369335-uibri7ifn4kiupkvrr8q0obpkqeteeh7.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.java.sorteioskt",
+            "certificate_hash": "baa69385651cf0a3cd089b2e5882dc331cb0b344"
+          }
+        },
+        {
+          "client_id": "678851369335-h1f5po0b58agi6824p6a0e62shi9c8gg.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDOq6pPyVe7rhvfOA3B1Kx432HB8qd5DUg"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "678851369335-h1f5po0b58agi6824p6a0e62shi9c8gg.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

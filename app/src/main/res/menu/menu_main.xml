@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item
+        android:id="@+id/menu_main_sair"
+        android:orderInCategory="90"
+        android:title= "Sair" />
+
+    <!--
+    <item android:id="@+id/menu_action_search"
+        android:icon="@drawable/ic_search"
+        android:title="Search"
+        app:iconTint="@android:color/white"
+        app:actionViewClass="androidx.appcompat.widget.SearchView"
+        app:showAsAction="ifRoom"/> -->
+</menu>

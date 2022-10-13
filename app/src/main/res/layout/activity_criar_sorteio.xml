@@ -1,0 +1,222 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/containerBackgroundCriarSorteio"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/cor_dinheiro"
+    tools:context=".activity.CriarSorteioActivity">
+
+    <TextView
+        android:id="@+id/textViewVoltarDinheiro"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="24dp"
+        android:layout_marginTop="16dp"
+        android:drawableLeft="@drawable/ic_arrow_branco_24"
+        android:gravity="center"
+        android:text="Sortear "
+        android:textColor="#FFFFFF"
+        android:textSize="30sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/constraintLayout"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="16dp"
+        android:background="@drawable/fundo_gradiente_branco"
+        android:elevation="3dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textViewVoltarDinheiro">
+
+        <TextView
+            android:id="@+id/textView5"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="20dp"
+            android:drawableLeft="@drawable/ic_baseline_attach_money_24"
+            android:gravity="center"
+            android:text="Escolha os parâmetros do sorteio"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/textViewValorPremioTitulo"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:drawableLeft="@drawable/ic_arrow_cinza_18"
+            android:text="Premiação:   "
+            android:textSize="16sp"
+            app:layout_constraintBottom_toBottomOf="@+id/editTextPremio"
+            app:layout_constraintStart_toStartOf="@+id/textView12"
+            app:layout_constraintTop_toTopOf="@+id/editTextPremio" />
+
+        <EditText
+            android:id="@+id/editTextPremio"
+            android:layout_width="0dp"
+            android:layout_height="45dp"
+            android:layout_marginTop="12dp"
+            android:layout_marginEnd="16dp"
+            android:background="@drawable/shape_container_sorteios_cinza"
+            android:elevation="2dp"
+            android:ems="10"
+            android:hint="Digite o prêmio"
+            android:inputType="numberDecimal"
+            android:paddingStart="12dp"
+            android:textColorHint="#787878"
+            android:textSize="12sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/textViewValorPremioTitulo"
+            app:layout_constraintTop_toBottomOf="@+id/editTextDataFinal" />
+
+        <Button
+            android:id="@+id/buttonSalvarSorteioDinheiro"
+            android:layout_width="0dp"
+            android:layout_height="45dp"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="24dp"
+            android:layout_marginEnd="16dp"
+            android:background="@drawable/border_custom_degrade"
+            android:elevation="4dp"
+            android:text="Salvar sorteio"
+            android:textColor="#FFFFFF"
+            android:textSize="14sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/editTextPremio" />
+
+        <TextView
+            android:id="@+id/textView9"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:drawableLeft="@drawable/ic_arrow_cinza_18"
+            android:text="Quantidade de participantes:   "
+            android:textSize="16sp"
+            app:layout_constraintBottom_toBottomOf="@+id/editTextQtParticipantes"
+            app:layout_constraintStart_toStartOf="@+id/textView5"
+            app:layout_constraintTop_toTopOf="@+id/editTextQtParticipantes" />
+
+        <EditText
+            android:id="@+id/editTextQtParticipantes"
+            android:layout_width="0dp"
+            android:layout_height="45dp"
+            android:layout_marginTop="12dp"
+            android:layout_marginEnd="16dp"
+            android:background="@drawable/shape_container_sorteios_cinza"
+            android:elevation="2dp"
+            android:ems="10"
+            android:hint="100"
+            android:inputType="number"
+            android:paddingStart="12dp"
+            android:textColorHint="#787878"
+            android:textSize="12sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/textView9"
+            app:layout_constraintTop_toBottomOf="@+id/textView5" />
+
+        <TextView
+            android:id="@+id/textView10"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:drawableLeft="@drawable/ic_arrow_cinza_18"
+            android:text="Data início:   "
+            android:textSize="16sp"
+            app:layout_constraintBottom_toBottomOf="@+id/editTextDataInicial"
+            app:layout_constraintStart_toStartOf="@+id/textView9"
+            app:layout_constraintTop_toTopOf="@+id/editTextDataInicial" />
+
+        <EditText
+            android:id="@+id/editTextDataInicial"
+            android:layout_width="90dp"
+            android:layout_height="45dp"
+            android:layout_marginTop="12dp"
+            android:background="@drawable/shape_container_sorteios_cinza"
+            android:elevation="2dp"
+            android:ems="10"
+            android:hint="15/16/2022"
+            android:inputType="numberDecimal"
+            android:paddingStart="12dp"
+            android:textColorHint="#787878"
+            android:textSize="12sp"
+            app:layout_constraintStart_toEndOf="@+id/textView10"
+            app:layout_constraintTop_toBottomOf="@+id/textView9" />
+
+        <TextView
+            android:id="@+id/textView12"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:drawableLeft="@drawable/ic_arrow_cinza_18"
+            android:text="Data fim:   "
+            android:textSize="16sp"
+            app:layout_constraintBottom_toBottomOf="@+id/editTextDataFinal"
+            app:layout_constraintStart_toStartOf="@+id/textView10"
+            app:layout_constraintTop_toTopOf="@+id/editTextDataFinal" />
+
+        <EditText
+            android:id="@+id/editTextDataFinal"
+            android:layout_width="90dp"
+            android:layout_height="45dp"
+            android:layout_marginTop="12dp"
+            android:background="@drawable/shape_container_sorteios_cinza"
+            android:elevation="2dp"
+            android:ems="10"
+            android:hint="15/16/2022"
+            android:inputType="numberDecimal"
+            android:paddingStart="12dp"
+            android:textColorHint="#787878"
+            android:textSize="12sp"
+            app:layout_constraintStart_toEndOf="@+id/textView12"
+            app:layout_constraintTop_toBottomOf="@+id/editTextDataInicial" />
+
+        <TextView
+            android:id="@+id/textViewSorteiosRecuperados"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="12dp"
+            android:layout_marginBottom="24dp"
+            android:drawableLeft="@drawable/ic_arrow_cinza_18"
+            android:text="Consultar sorteios salvos"
+            android:textSize="16sp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="@+id/buttonSalvarSorteioDinheiro"
+            app:layout_constraintTop_toBottomOf="@+id/buttonSalvarSorteioDinheiro" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <ImageView
+        android:id="@+id/imageViewSorteiosDinheiro"
+        android:layout_width="0dp"
+        android:layout_height="150dp"
+        android:layout_marginTop="32dp"
+        android:layout_marginBottom="32dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.497"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/constraintLayout"
+        app:srcCompat="@drawable/sorteio_logo" />
+
+    <TextView
+        android:id="@+id/txtCriarTipoSorteio"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="tipo sorteio"
+        android:textColor="#FFFFFF"
+        android:textSize="30sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="@+id/textViewVoltarDinheiro"
+        app:layout_constraintStart_toEndOf="@+id/textViewVoltarDinheiro"
+        app:layout_constraintTop_toTopOf="@+id/textViewVoltarDinheiro" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

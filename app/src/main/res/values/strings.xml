@@ -1,0 +1,13 @@
+<resources>
+    <string name="app_name">SorteiosKT</string>
+    <string name="info_nome">Nome vazio</string>
+    <string name="info_rg">Rg vazio</string>
+    <string name="info_email">Email vazio</string>
+    <string name="info_senha">Senha vazio</string>
+    <string name="info_senha_repetir">Repetir senha vazio</string>
+    <string name="info_senha_repetir_comparacao">Senhas não são iguais</string>
+    <string name="info_sem_conexao">Sem conexão com internet</string>
+    <string name="sucesso_no_login"> Sucesso no login</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+</resources>

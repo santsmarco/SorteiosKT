@@ -1,0 +1,153 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <TextView
+            android:id="@+id/textFundoCorSorteios"
+            android:layout_width="0dp"
+            android:layout_height="125dp"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="16dp"
+            android:layout_marginEnd="8dp"
+            android:layout_marginBottom="8dp"
+            android:background="@drawable/border_custom_degrade"
+            android:elevation="4dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.0" />
+
+        <TextView
+            android:id="@+id/textViewAdapter"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="13dp"
+            android:drawableLeft="@drawable/ic_arrow_direita_branco_24"
+            android:elevation="9dp"
+            android:text="Sorteio"
+            android:textColor="#FFFFFF"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            app:layout_constraintStart_toStartOf="@+id/textFundoCorSorteios"
+            app:layout_constraintTop_toTopOf="@+id/textFundoCorSorteios" />
+
+        <TextView
+            android:id="@+id/textViewAdapterTipoSorteio"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:elevation="9dp"
+            android:text="tipo sorteio"
+            android:textColor="#FFFFFF"
+            android:textSize="14sp"
+            app:layout_constraintBottom_toBottomOf="@+id/textView7"
+            app:layout_constraintStart_toEndOf="@+id/textView7"
+            app:layout_constraintTop_toTopOf="@+id/textView7" />
+
+        <TextView
+            android:id="@+id/textViewas"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="4dp"
+            android:drawableLeft="@drawable/ic_arrow_branco_18"
+            android:elevation="9dp"
+            android:text="Data início: "
+            android:textColor="#FFEB3B"
+            android:textSize="14sp"
+            android:textStyle="bold"
+            app:layout_constraintStart_toStartOf="@+id/textView7"
+            app:layout_constraintTop_toBottomOf="@+id/textViewAdapterTipoSorteio" />
+
+        <TextView
+            android:id="@+id/textViewLoja"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="4dp"
+            android:drawableLeft="@drawable/ic_arrow_branco_18"
+            android:elevation="9dp"
+            android:text="Data fim: "
+            android:textColor="#FFEB3B"
+            android:textSize="14sp"
+            android:textStyle="bold"
+            app:layout_constraintStart_toStartOf="@+id/textViewas"
+            app:layout_constraintTop_toBottomOf="@+id/textViewas" />
+
+        <TextView
+            android:id="@+id/textViewCod"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="4dp"
+            android:elevation="9dp"
+            android:text="Cód:"
+            android:textColor="#FFFFFF"
+            android:textSize="14sp"
+            app:layout_constraintEnd_toStartOf="@+id/textViewCodigoSorteio"
+            app:layout_constraintTop_toTopOf="@+id/textViewAdapter" />
+
+        <TextView
+            android:id="@+id/textViewCodigoSorteio"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="16dp"
+            android:elevation="9dp"
+            android:text="Código"
+            android:textColor="#FFFFFF"
+            android:textSize="14sp"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toBottomOf="@+id/textViewCod"
+            app:layout_constraintEnd_toEndOf="@+id/textFundoCorSorteios"
+            app:layout_constraintTop_toTopOf="@+id/textViewCod" />
+
+        <TextView
+            android:id="@+id/textViewDataInicio"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:elevation="4dp"
+            android:text="data início"
+            android:textColor="#FFEB3B"
+            android:textSize="14sp"
+            app:layout_constraintBottom_toBottomOf="@+id/textViewas"
+            app:layout_constraintStart_toEndOf="@+id/textViewas"
+            app:layout_constraintTop_toTopOf="@+id/textViewas" />
+
+        <TextView
+            android:id="@+id/textViewDataFim"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:elevation="4dp"
+            android:text="data fim"
+            android:textColor="#FFEB3B"
+            android:textSize="14sp"
+            app:layout_constraintBottom_toBottomOf="@+id/textViewLoja"
+            app:layout_constraintStart_toEndOf="@+id/textViewLoja"
+            app:layout_constraintTop_toTopOf="@+id/textViewLoja" />
+
+        <TextView
+            android:id="@+id/textView7"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="4dp"
+            android:drawableLeft="@drawable/ic_arrow_branco_18"
+            android:elevation="4dp"
+            android:text="Tipo do sorteio: "
+            android:textColor="#FFFFFF"
+            android:textSize="14sp"
+            android:textStyle="bold"
+            app:layout_constraintStart_toStartOf="@+id/textViewAdapter"
+            app:layout_constraintTop_toBottomOf="@+id/textViewAdapter" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>
