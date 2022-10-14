@@ -15,7 +15,6 @@ class Sorteios: Serializable {
     var dataFim: String = ""
     var premio: String = ""
 
-
     fun salvarSorteioDatabase(){
         val firebaseRef: DatabaseReference = FirebaseDatabase.getInstance().reference
         val usuarioRef: DatabaseReference = firebaseRef.child("sorteiosAbertos").child(idUsuarioSorteio).child(idSorteio)

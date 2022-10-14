@@ -254,7 +254,7 @@
             app:layout_constraintTop_toBottomOf="@+id/buttonAddSalvar" />
 
         <TextView
-            android:id="@+id/textView21"
+            android:id="@+id/textViewConsultarParticipantes"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginEnd="16dp"

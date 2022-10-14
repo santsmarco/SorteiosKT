@@ -43,7 +43,6 @@ class CriarSorteioActivity : AppCompatActivity() {
             binding.containerBackgroundCriarSorteio.setBackgroundResource(R.color.cor_videos)
         }
 
-
         binding.imageViewSorteiosDinheiro.setOnClickListener{
             MyBounce.animationBounce(it, this)
             MyBounce.vibrar(this)
@@ -68,7 +67,6 @@ class CriarSorteioActivity : AppCompatActivity() {
             MyBounce.animationBounce(it, this)
             MyBounce.vibrar(this)
             startActivity(Intent(this@CriarSorteioActivity,SorteiosSalvosActivity::class.java))
-
         }
     }
 
@@ -106,6 +104,4 @@ class CriarSorteioActivity : AppCompatActivity() {
         startActivity(Intent(this@CriarSorteioActivity, SorteiosSalvosActivity::class.java))
         finish()
     }
-
-
 }

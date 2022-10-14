@@ -25,7 +25,6 @@ class LoginActivity : AppCompatActivity(), View.OnClickListener {
         super.onCreate(savedInstanceState)
         binding = ActivityLoginBinding.inflate(layoutInflater)
         setContentView(binding.root)
-
         binding.buttonEntrarLogin.setOnClickListener(this)
         binding.textViewCadastro.setOnClickListener(this)
         binding.textViewRecuperarSenha.setOnClickListener(this)

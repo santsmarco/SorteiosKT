@@ -15,8 +15,6 @@ public class MaskEditUtil {
     public static final String FORMAT_DATE_VENCIMENTO_CARTAO = "##/####";
 
     /**
-     * Método que deve ser chamado para realizar a formatação
-     *
      * @param ediTxt
      * @param mask
      * @return
@@ -25,7 +23,6 @@ public class MaskEditUtil {
         return new TextWatcher() {
             boolean isUpdating;
             String old = "";
-
 
             @Override
             public void afterTextChanged(final Editable s) {}

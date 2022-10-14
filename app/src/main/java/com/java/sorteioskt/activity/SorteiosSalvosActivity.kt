@@ -1,6 +1,5 @@
 package com.java.sorteioskt.activity
 
-
 import android.content.Intent
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
@@ -21,7 +20,6 @@ class SorteiosSalvosActivity : AppCompatActivity() {
     private var sorteioRef: DatabaseReference? = null
     private lateinit var firebaseDatabaseReference: DatabaseReference
     private var valueEventListenerSorteios: ValueEventListener? = null
-    private var tipoSorteio: String = ""
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -48,8 +46,6 @@ class SorteiosSalvosActivity : AppCompatActivity() {
 
             }
         })
-
-
     }
 
     private fun abrirAddParticipantes(position: Int){
@@ -87,7 +83,4 @@ class SorteiosSalvosActivity : AppCompatActivity() {
         super.onStart()
         recuperarSorteios()
     }
-
-
-
 }

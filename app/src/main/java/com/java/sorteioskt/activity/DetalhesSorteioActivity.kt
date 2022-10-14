@@ -47,7 +47,15 @@ class DetalhesSorteioActivity : AppCompatActivity() {
             val intent = Intent(this, MainActivity::class.java)
             intent.flags = Intent.FLAG_ACTIVITY_CLEAR_TOP or Intent.FLAG_ACTIVITY_NEW_TASK
             startActivity(intent)
+        }
 
+        binding.textViewConsultarParticipantes.setOnClickListener{
+            var tipoSorteio: String = binding.txtAddTipoSorteio.text.toString()
+            var intent = Intent(this@DetalhesSorteioActivity, ParticipantesActivity::class.java)
+            intent.putExtra("objetoLista",listaSorteios)
+            intent.putExtra("tipoSorteio",tipoSorteio)
+            intent.putExtra("position", positionList)
+            startActivity(intent)
         }
 
         binding.switchAddParticipantes.setOnCheckedChangeListener{ switch, isCheked ->
@@ -64,7 +72,6 @@ class DetalhesSorteioActivity : AppCompatActivity() {
                 binding.edtAddTelefone.visibility = View.GONE
                 binding.buttonAddSalvar.visibility = View.GONE
             }
-            
         }
     }
 
@@ -101,7 +108,15 @@ class DetalhesSorteioActivity : AppCompatActivity() {
         participante.endereco = enderecoParticipante
         participante.telefone = telefoneParticipante
         participante.salvarParticipanteSorteioDatabase()
+        limparCampos()
 
+    }
+
+    private fun limparCampos() {
+        binding.edtAddNome.setText("")
+        binding.edtAddCpf.setText("")
+        binding.edtAddEndereco.setText("")
+        binding.edtAddTelefone.setText("")
     }
 
 

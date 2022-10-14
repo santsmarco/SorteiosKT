@@ -165,7 +165,6 @@ class MainActivity : AppCompatActivity(), View.OnClickListener {
             var intent = Intent(this@MainActivity, CriarSorteioActivity::class.java)
             intent.putExtra("tipoSorteio", "Dinheiro")
             startActivity(intent)
-
         }
     }
 

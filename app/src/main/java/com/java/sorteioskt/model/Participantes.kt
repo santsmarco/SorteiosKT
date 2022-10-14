@@ -15,7 +15,6 @@ class Participantes: Serializable {
     var endereco: String = ""
     var telefone: String = ""
 
-
     fun salvarParticipanteSorteioDatabase(){
         val firebaseRef: DatabaseReference = FirebaseDatabase.getInstance().reference
         val usuarioRef: DatabaseReference = firebaseRef.child("sorteioParticipantes")

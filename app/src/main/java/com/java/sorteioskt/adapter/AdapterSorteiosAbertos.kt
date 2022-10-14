@@ -28,7 +28,6 @@ class AdapterSorteiosAbertos(listaSorteios: List<Sorteios>, var context: Context
         holder.dataInicio.setText(sorteios.dataInicio)
         holder.dataFim.setText(sorteios.dataFim)
 
-        //Método para pegar apenas o final da chave aleatória da ocorrência
         val idSorteios: String = sorteios.idSorteio
         val finalId: String = idSorteios.substring(idSorteios.length - 5)
         holder.cod.text = finalId
@@ -42,24 +41,22 @@ class AdapterSorteiosAbertos(listaSorteios: List<Sorteios>, var context: Context
         }else if(sorteios.tipo.equals("Vídeos")){
             holder.fundoCor.setBackgroundResource(R.drawable.border_custom_degrade_videos)
         }
-
     }
 
     override fun getItemCount(): Int {
         return listaSorteiosFiltros.size
     }
 
-    //Filtrando LISTA com itens pesquisados para FORNECEDOR
     override fun getFilter(): Filter {
         return object : Filter() {
             override fun performFiltering(textoPesuisado: CharSequence): FilterResults {
-                val textoFornecedor: String = textoPesuisado.toString()
-                if (textoFornecedor.isEmpty()) {
+                val textoTipoSorteio: String = textoPesuisado.toString()
+                if (textoTipoSorteio.isEmpty()) {
                     listaSorteiosFiltros = listaSorteios
                 } else {
                     val listaFiltrada: ArrayList<Sorteios> = ArrayList<Sorteios>()
                     for (sorteios: Sorteios in listaSorteios) {
-                        if (sorteios.tipo.toLowerCase().contains(textoFornecedor.lowercase(Locale.getDefault()))) {
+                        if (sorteios.tipo.toLowerCase().contains(textoTipoSorteio.lowercase(Locale.getDefault()))) {
                             listaFiltrada.add(sorteios)
                         }
                     }
@@ -77,17 +74,16 @@ class AdapterSorteiosAbertos(listaSorteios: List<Sorteios>, var context: Context
         }
     }
 
-    //Filtro para responsável
     val responsavelFilter: Filter
         get() = object : Filter() {
             override fun performFiltering(textoPesuisado: CharSequence): FilterResults {
-                val textoResponsavel: String = textoPesuisado.toString()
-                if (textoResponsavel.isEmpty()) {
+                val textoIdSorteio: String = textoPesuisado.toString()
+                if (textoIdSorteio.isEmpty()) {
                     listaSorteiosFiltros = listaSorteios
                 } else {
                     val listaFiltrada: ArrayList<Sorteios> = ArrayList<Sorteios>()
                     for (sorteios: Sorteios in listaSorteios) {
-                        if (sorteios.idSorteio.toLowerCase().contains(textoResponsavel.lowercase(Locale.getDefault()))) {
+                        if (sorteios.idSorteio.toLowerCase().contains(textoIdSorteio.lowercase(Locale.getDefault()))) {
                             listaFiltrada.add(sorteios)
                         }
                     }
@@ -104,18 +100,17 @@ class AdapterSorteiosAbertos(listaSorteios: List<Sorteios>, var context: Context
             }
         }
 
-    //Filtro para Status
     val statusFilter: Filter
         get() {
             return object : Filter() {
                 override fun performFiltering(textoPesuisado: CharSequence): FilterResults {
-                    val textoStatus: String = textoPesuisado.toString()
-                    if (textoStatus.isEmpty()) {
+                    val textoDataInicio: String = textoPesuisado.toString()
+                    if (textoDataInicio.isEmpty()) {
                         listaSorteiosFiltros = listaSorteios
                     } else {
                         val listaFiltrada: ArrayList<Sorteios> = ArrayList<Sorteios>()
                         for (sorteios: Sorteios in listaSorteios) {
-                            if (sorteios.dataInicio.toLowerCase().contains(textoStatus.lowercase(Locale.getDefault()))) {
+                            if (sorteios.dataInicio.toLowerCase().contains(textoDataInicio.lowercase(Locale.getDefault()))) {
                                 listaFiltrada.add(sorteios)
                             }
                         }
@@ -136,18 +131,17 @@ class AdapterSorteiosAbertos(listaSorteios: List<Sorteios>, var context: Context
             }
         }
 
-    //Filtro para Data
     val dataFilter: Filter
         get() {
             return object : Filter() {
                 override fun performFiltering(textoPesuisado: CharSequence): FilterResults {
-                    val textoData: String = textoPesuisado.toString()
-                    if (textoData.isEmpty()) {
+                    val textoDataFim: String = textoPesuisado.toString()
+                    if (textoDataFim.isEmpty()) {
                         listaSorteiosFiltros = listaSorteios
                     } else {
                         val listaFiltrada: ArrayList<Sorteios> = ArrayList<Sorteios>()
                         for (sorteios: Sorteios in listaSorteios) {
-                            if (sorteios.dataFim.toLowerCase().contains(textoData.lowercase(Locale.getDefault()))) {
+                            if (sorteios.dataFim.toLowerCase().contains(textoDataFim.lowercase(Locale.getDefault()))) {
                                 listaFiltrada.add(sorteios)
                             }
                         }
@@ -186,10 +180,10 @@ class AdapterSorteiosAbertos(listaSorteios: List<Sorteios>, var context: Context
         var fundoCor: TextView
 
         init {
-            tipo = itemView.findViewById(R.id.textViewAdapterTipoSorteio)
-            dataInicio = itemView.findViewById(R.id.textViewDataInicio)
-            dataFim = itemView.findViewById(R.id.textViewDataFim)
-            cod = itemView.findViewById(R.id.textViewCodigoSorteio)
+            tipo = itemView.findViewById(R.id.txtTipoSorteio)
+            dataInicio = itemView.findViewById(R.id.txtDataInicio)
+            dataFim = itemView.findViewById(R.id.txtDataFim)
+            cod = itemView.findViewById(R.id.txtCodSorteio)
             fundoCor = itemView.findViewById(R.id.textFundoCorSorteios)
 
             itemView.setOnClickListener {
@@ -200,9 +194,6 @@ class AdapterSorteiosAbertos(listaSorteios: List<Sorteios>, var context: Context
                 listener.onClickLongo(adapterPosition)
                 true
             }
-
-
-
         }
     }
 
