@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@drawable/shape_custom_degrade_quadrado"
-    tools:context=".activity.LoginActivity">
+    tools:context=".ui.authenticationUi.LoginActivity">
 
     <TextView
         android:id="@+id/textViewRecuperarSenha"
@@ -72,7 +72,7 @@
         android:layout_width="150dp"
         android:layout_height="35dp"
         android:layout_marginTop="24dp"
-        android:background="@drawable/border_custom_degrade"
+        android:background="@drawable/border_custom_degrade_roxo"
         android:text="Entrar"
         android:textColor="#FFFFFF"
         android:textSize="12sp"

@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@drawable/shape_custom_degrade_quadrado"
-    tools:context=".activity.CadastroActivity">
+    tools:context=".ui.authenticationUi.CadastroActivity">
 
     <EditText
         android:id="@+id/editTextRepetirSenhaCadastro"
@@ -111,7 +111,7 @@
         android:layout_width="150dp"
         android:layout_height="40dp"
         android:layout_marginTop="24dp"
-        android:background="@drawable/border_custom_degrade"
+        android:background="@drawable/border_custom_degrade_roxo"
         android:text="Cadastrar"
         android:textColor="#FFFFFF"
         android:textSize="12sp"

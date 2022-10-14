@@ -6,7 +6,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@color/cor_dinheiro"
-    tools:context=".activity.CriarSorteioActivity">
+    tools:context=".ui.SorteiosUi.CriarSorteioActivity">
 
     <TextView
         android:id="@+id/textViewVoltarDinheiro"
@@ -86,7 +86,7 @@
             android:layout_marginStart="16dp"
             android:layout_marginTop="24dp"
             android:layout_marginEnd="16dp"
-            android:background="@drawable/border_custom_degrade"
+            android:background="@drawable/border_custom_degrade_roxo"
             android:elevation="4dp"
             android:text="Salvar sorteio"
             android:textColor="#FFFFFF"

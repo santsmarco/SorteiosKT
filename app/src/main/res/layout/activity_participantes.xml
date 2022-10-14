@@ -6,7 +6,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@drawable/shape_custom_degrade_quadrado"
-    tools:context=".activity.ParticipantesActivity">
+    tools:context=".ui.SorteiosUi.ParticipantesSorteioActivity">
 
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/recyclerParticipantes"

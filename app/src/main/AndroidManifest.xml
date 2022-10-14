@@ -16,31 +16,31 @@
         android:theme="@style/Theme.SorteiosKT"
         tools:targetApi="31">
         <activity
-            android:name=".activity.ParticipantesActivity"
+            android:name=".ui.SorteiosUi.ParticipantesSorteioActivity"
+            android:exported="false"
+            android:theme="@style/MeuTheme" />
+        <activity
+            android:name=".ui.SorteiosUi.DetalhesSorteioActivity"
+            android:exported="false"
+            android:theme="@style/MeuTheme" />
+        <activity
+            android:name=".ui.SorteiosUi.SorteiosSalvosActivity"
             android:exported="false"
             android:theme="@style/MeuTheme"/>
         <activity
-            android:name=".activity.DetalhesSorteioActivity"
+            android:name=".ui.SorteiosUi.CriarSorteioActivity"
             android:exported="false"
             android:theme="@style/MeuTheme" />
         <activity
-            android:name=".activity.SorteiosSalvosActivity"
+            android:name=".ui.authenticationUi.CadastroActivity"
             android:exported="false"
             android:theme="@style/MeuTheme" />
         <activity
-            android:name=".activity.CriarSorteioActivity"
-            android:exported="false"
-            android:theme="@style/MeuTheme2" />
-        <activity
-            android:name=".activity.CadastroActivity"
+            android:name=".ui.MainActivity"
             android:exported="false"
             android:theme="@style/MeuTheme" />
         <activity
-            android:name=".activity.MainActivity"
-            android:exported="false"
-            android:theme="@style/MeuTheme" />
-        <activity
-            android:name=".activity.LoginActivity"
+            android:name=".ui.authenticationUi.LoginActivity"
             android:exported="true"
             android:theme="@style/MeuTheme">
             <intent-filter>

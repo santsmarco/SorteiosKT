@@ -1,4 +1,4 @@
-package com.java.sorteioskt.activity
+package com.java.sorteioskt.ui.authenticationUi
 
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
@@ -9,6 +9,7 @@ import com.java.sorteioskt.R
 import com.java.sorteioskt.anim.MyBounce
 import com.java.sorteioskt.databinding.ActivityCadastroBinding
 import com.java.sorteioskt.model.Usuario
+import com.java.sorteioskt.ui.MainActivity
 
 class CadastroActivity : AppCompatActivity() {
 

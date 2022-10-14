@@ -1,9 +1,9 @@
-package com.java.sorteioskt.activity
+package com.java.sorteioskt.ui.SorteiosUi
 
 import android.content.Intent
+import android.net.ConnectivityManager
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import android.view.View
 import android.widget.Toast
 import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.database.DatabaseReference
@@ -12,6 +12,7 @@ import com.java.sorteioskt.R
 import com.java.sorteioskt.anim.MyBounce
 import com.java.sorteioskt.databinding.ActivityCriarSorteioBinding
 import com.java.sorteioskt.model.Sorteios
+import com.java.sorteioskt.ui.MainActivity
 import com.java.sorteioskt.util.MaskEditUtil
 
 class CriarSorteioActivity : AppCompatActivity() {
@@ -32,6 +33,7 @@ class CriarSorteioActivity : AppCompatActivity() {
         binding.editTextDataFinal.addTextChangedListener(MaskEditUtil.mask(binding.editTextDataFinal, MaskEditUtil.FORMAT_DATE))
         tipoSorteio = intent.getStringExtra("tipoSorteio").toString()
         binding.txtCriarTipoSorteio.setText(tipoSorteio)
+        title = "Criar sorteio"
 
         if(tipoSorteio.equals("Dinheiro")){
             binding.containerBackgroundCriarSorteio.setBackgroundResource(R.color.cor_dinheiro)
@@ -46,14 +48,14 @@ class CriarSorteioActivity : AppCompatActivity() {
         binding.imageViewSorteiosDinheiro.setOnClickListener{
             MyBounce.animationBounce(it, this)
             MyBounce.vibrar(this)
-            startActivity(Intent(this@CriarSorteioActivity,MainActivity::class.java))
+            startActivity(Intent(this@CriarSorteioActivity, MainActivity::class.java))
             finish()
         }
 
         binding.textViewVoltarDinheiro.setOnClickListener{
             MyBounce.animationBounce(it, this)
             MyBounce.vibrar(this)
-            startActivity(Intent(this@CriarSorteioActivity,MainActivity::class.java))
+            startActivity(Intent(this@CriarSorteioActivity, MainActivity::class.java))
             finish()
         }
 
@@ -66,7 +68,7 @@ class CriarSorteioActivity : AppCompatActivity() {
         binding.textViewSorteiosRecuperados.setOnClickListener{
             MyBounce.animationBounce(it, this)
             MyBounce.vibrar(this)
-            startActivity(Intent(this@CriarSorteioActivity,SorteiosSalvosActivity::class.java))
+            startActivity(Intent(this@CriarSorteioActivity, SorteiosSalvosActivity::class.java))
         }
     }
 
@@ -90,18 +92,27 @@ class CriarSorteioActivity : AppCompatActivity() {
 
     private fun salvarSorteio(qtParticipantes: String, dataInicio: String, dataFim: String, valorPremio: String) {
 
-        var chaveAleatoria:String = firebaseDatabase.push().key.toString()
+        if(verificaInternet()) {
+            var chaveAleatoria: String = firebaseDatabase.push().key.toString()
+            sorteios.idUsuarioSorteio = firebaseAuth.uid.toString()
+            sorteios.idSorteio = chaveAleatoria
+            sorteios.tipo = tipoSorteio
+            sorteios.qtParticipantes = qtParticipantes
+            sorteios.dataInicio = dataInicio
+            sorteios.dataFim = dataFim
+            sorteios.premio = valorPremio
+            sorteios.salvarSorteioDatabase()
+            Toast.makeText(this, "Sorteio salvo com sucesso", Toast.LENGTH_SHORT).show()
+            startActivity(Intent(this@CriarSorteioActivity, SorteiosSalvosActivity::class.java))
+            finish()
+        }else{
+            Toast.makeText(this, "Sem conexão", Toast.LENGTH_SHORT).show()
+        }
+    }
 
-        sorteios.idUsuarioSorteio = firebaseAuth.uid.toString()
-        sorteios.idSorteio = chaveAleatoria
-        sorteios.tipo = tipoSorteio
-        sorteios.qtParticipantes = qtParticipantes
-        sorteios.dataInicio = dataInicio
-        sorteios.dataFim = dataFim
-        sorteios.premio = valorPremio
-        sorteios.salvarSorteioDatabase()
-
-        startActivity(Intent(this@CriarSorteioActivity, SorteiosSalvosActivity::class.java))
-        finish()
+    private fun verificaInternet(): Boolean {
+        val conexao = getSystemService(CONNECTIVITY_SERVICE) as ConnectivityManager
+        val info = conexao.activeNetworkInfo
+        return info != null && info.isConnected
     }
 }

@@ -1,6 +1,7 @@
-package com.java.sorteioskt.activity
+package com.java.sorteioskt.ui.SorteiosUi
 
 import android.content.Intent
+import android.net.ConnectivityManager
 import android.os.Bundle
 import android.view.View
 import android.widget.Toast
@@ -13,6 +14,7 @@ import com.java.sorteioskt.anim.MyBounce
 import com.java.sorteioskt.databinding.ActivityDetalhesSorteioBinding
 import com.java.sorteioskt.model.Participantes
 import com.java.sorteioskt.model.Sorteios
+import com.java.sorteioskt.ui.MainActivity
 
 class DetalhesSorteioActivity : AppCompatActivity() {
 
@@ -35,7 +37,7 @@ class DetalhesSorteioActivity : AppCompatActivity() {
 
         mostrarDadosSorteio()
         var cod:String = binding.txtAddCod.text.toString()
-        title = "Sorteio $cod"
+        title = "Sorteio código: $cod"
 
         binding.buttonAddSalvar.setOnClickListener{
             MyBounce.animationBounce(it,this)
@@ -51,7 +53,7 @@ class DetalhesSorteioActivity : AppCompatActivity() {
 
         binding.textViewConsultarParticipantes.setOnClickListener{
             var tipoSorteio: String = binding.txtAddTipoSorteio.text.toString()
-            var intent = Intent(this@DetalhesSorteioActivity, ParticipantesActivity::class.java)
+            var intent = Intent(this@DetalhesSorteioActivity, ParticipantesSorteioActivity::class.java)
             intent.putExtra("objetoLista",listaSorteios)
             intent.putExtra("tipoSorteio",tipoSorteio)
             intent.putExtra("position", positionList)
@@ -100,15 +102,20 @@ class DetalhesSorteioActivity : AppCompatActivity() {
 
     private fun salvarDados(idParticipante: String, idSorteio: String, idUsuarioSorteio: String, nomeParticipante: String, cpfParticipante: String, enderecoParticipante: String, telefoneParticipante: String) {
 
-        participante.idParticipante = idParticipante
-        participante.idSorteio = idSorteio
-        participante.idUsuarioSorteio = idUsuarioSorteio
-        participante.nome = nomeParticipante
-        participante.cpf = cpfParticipante
-        participante.endereco = enderecoParticipante
-        participante.telefone = telefoneParticipante
-        participante.salvarParticipanteSorteioDatabase()
-        limparCampos()
+        if(verificaInternet()) {
+            participante.idParticipante = idParticipante
+            participante.idSorteio = idSorteio
+            participante.idUsuarioSorteio = idUsuarioSorteio
+            participante.nome = nomeParticipante
+            participante.cpf = cpfParticipante
+            participante.endereco = enderecoParticipante
+            participante.telefone = telefoneParticipante
+            participante.salvarParticipanteSorteioDatabase()
+            Toast.makeText(this, "Participante salvo com sucesso", Toast.LENGTH_SHORT).show()
+            limparCampos()
+        }else{
+            Toast.makeText(this, "Sem conexão", Toast.LENGTH_SHORT).show()
+        }
 
     }
 
@@ -119,6 +126,11 @@ class DetalhesSorteioActivity : AppCompatActivity() {
         binding.edtAddTelefone.setText("")
     }
 
+    private fun verificaInternet(): Boolean {
+        val conexao = getSystemService(CONNECTIVITY_SERVICE) as ConnectivityManager
+        val info = conexao.activeNetworkInfo
+        return info != null && info.isConnected
+    }
 
     private fun mostrarDadosSorteio() {
         //Recuperar array list

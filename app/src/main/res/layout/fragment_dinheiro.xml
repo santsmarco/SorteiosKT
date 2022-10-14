@@ -179,7 +179,7 @@
             android:id="@+id/buttonConsultarSorteiosDinheiro"
             android:layout_width="200dp"
             android:layout_height="35dp"
-            android:background="@drawable/border_custom_degrade"
+            android:background="@drawable/border_custom_degrade_roxo"
             android:text="Consultar sorteios salvos"
             android:textColor="#FFFFFF"
             android:textSize="10sp"

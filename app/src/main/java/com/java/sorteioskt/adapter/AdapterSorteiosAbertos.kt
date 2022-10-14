@@ -7,6 +7,7 @@ import android.view.ViewGroup
 import android.widget.*
 import androidx.recyclerview.widget.RecyclerView
 import com.java.sorteioskt.R
+import com.java.sorteioskt.anim.MyBounce
 import com.java.sorteioskt.model.Sorteios
 import java.util.*
 import kotlin.collections.ArrayList
@@ -171,7 +172,6 @@ class AdapterSorteiosAbertos(listaSorteios: List<Sorteios>, var context: Context
         mlistener = listener
     }
 
-
     inner class MyViewHolder(itemView: View, listener: AdapterSorteiosListener) : RecyclerView.ViewHolder(itemView) {
         var tipo: TextView
         var dataInicio: TextView
@@ -187,10 +187,14 @@ class AdapterSorteiosAbertos(listaSorteios: List<Sorteios>, var context: Context
             fundoCor = itemView.findViewById(R.id.textFundoCorSorteios)
 
             itemView.setOnClickListener {
+                MyBounce.animationBounce(it,context)
+                MyBounce.vibrar(context)
                 listener.onClickCurto(adapterPosition)
             }
 
             itemView.setOnLongClickListener{
+                MyBounce.animationBounce(it,context)
+                MyBounce.vibrar(context)
                 listener.onClickLongo(adapterPosition)
                 true
             }

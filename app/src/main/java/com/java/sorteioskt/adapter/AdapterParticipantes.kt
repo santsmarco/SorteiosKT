@@ -7,6 +7,7 @@ import android.view.ViewGroup
 import android.widget.*
 import androidx.recyclerview.widget.RecyclerView
 import com.java.sorteioskt.R
+import com.java.sorteioskt.anim.MyBounce
 import com.java.sorteioskt.model.Participantes
 import java.util.*
 import kotlin.collections.ArrayList
@@ -119,10 +120,14 @@ class AdapterParticipantes(listaParticipantes: List<Participantes>, var context:
             fundoCor = itemView.findViewById(R.id.textFundoCorParticipantes)
 
             itemView.setOnClickListener {
+                MyBounce.animationBounce(it,context)
+                MyBounce.vibrar(context)
                 listener.onClickCurto(adapterPosition)
             }
 
             itemView.setOnLongClickListener{
+                MyBounce.animationBounce(it,context)
+                MyBounce.vibrar(context)
                 listener.onClickLongo(adapterPosition)
                 true
             }

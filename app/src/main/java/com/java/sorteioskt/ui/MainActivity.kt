@@ -1,4 +1,4 @@
-package com.java.sorteioskt.activity
+package com.java.sorteioskt.ui
 
 import android.content.Intent
 import android.os.Build
@@ -14,6 +14,8 @@ import com.google.firebase.auth.FirebaseAuth
 import com.java.sorteioskt.R
 import com.java.sorteioskt.anim.MyBounce
 import com.java.sorteioskt.databinding.ActivityMainBinding
+import com.java.sorteioskt.ui.SorteiosUi.CriarSorteioActivity
+import com.java.sorteioskt.ui.authenticationUi.LoginActivity
 
 class MainActivity : AppCompatActivity(), View.OnClickListener {
 
